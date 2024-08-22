@@ -20,4 +20,14 @@ class Team extends Model
     {
         return $this->hasMany(Client::class);
     }
+
+    public function settings()
+    {
+        return $this->hasOne(Setting::class);
+    }
+
+    public function files()
+    {
+        return $this->hasMany(File::class);
+    }
 }
